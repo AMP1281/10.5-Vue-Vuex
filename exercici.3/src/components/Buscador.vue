@@ -1,11 +1,9 @@
 <template>
 
 <div>
-
     <form>
 
       <input class="w-100 my-3" v-model="titleInput" placeholder="Buscar..." type="text" name="title">
-      {{titleInput}}
 
       <div class="row my-3">
 
@@ -24,7 +22,6 @@
           </div>
 
       </div>
-
     </form>
 
     <div>
@@ -82,13 +79,10 @@ export default {
     buscarAvailable(){
          return this.$store.getters['getMoviesAvailable'](this.titleInput);
     },
-
     //Busca por título en la lista de NO disponibles
     buscarNotAvailable(){
          return this.$store.getters['getMoviesNotAvailable'](this.titleInput);
     },
-
-
 
     resultados(){
       if (this.titleInput ==="" && this.x === 'optionAvailable'){

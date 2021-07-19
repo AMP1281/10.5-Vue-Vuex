@@ -32,8 +32,6 @@ export default new Vuex.Store({
       return getters.availableFalseMovies.filter(movie => movie.title.toLowerCase().indexOf(title.toLowerCase())>-1)
     },
 
-
-
   },
 
   mutations:{
